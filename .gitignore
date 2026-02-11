@@ -1,0 +1,24 @@
+# Python debris
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment
+.env
+.venv
+env/
+venv/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Dataset (IMPORTANT: Do not upload patient data if it's private/real)
+PPD_analysis.csv
+
+# Flower/Ray logs
+.ray/
+ray_results/
+
+# Temporary outputs
+temp_global_*.json

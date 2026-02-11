@@ -1,0 +1,70 @@
+attrs==25.4.0
+certifi==2026.1.4
+cffi==2.0.0
+charset-normalizer==3.4.4
+click==8.1.8
+cloudpickle @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_cloudpickle_1765303462/work
+colorama @ file:///home/conda/feedstock_root/build_artifacts/colorama_1733218098505/work
+contourpy @ file:///home/conda/feedstock_root/build_artifacts/contourpy_1762525244278/work
+cryptography==44.0.3
+cycler @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_cycler_1764466758/work
+filelock==3.20.3
+flwr==1.25.0
+fonttools @ file:///home/conda/feedstock_root/build_artifacts/fonttools_1765632549069/work
+grpcio==1.76.0
+grpcio-health-checking==1.76.0
+idna==3.11
+imbalanced-learn @ file:///home/conda/feedstock_root/build_artifacts/imbalanced-learn_1766355322435/work
+iterators==0.0.2
+joblib @ file:///home/conda/feedstock_root/build_artifacts/joblib_1765794027227/work
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+kiwisolver @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_kiwisolver_1762488745/work
+llvmlite==0.46.0
+markdown-it-py==4.0.0
+matplotlib==3.10.8
+mdurl==0.1.2
+msgpack==1.1.2
+munkres==1.1.4
+numba @ file:///home/conda/feedstock_root/build_artifacts/numba_1765466519083/work
+numpy==2.3.5
+nvidia-nccl-cu12==2.29.2
+packaging @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_packaging_1745345660/work
+pandas==3.0.0
+pathspec==0.12.1
+pillow @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_pillow_1767353193/work
+# Editable install with no version control (ppd_xgboost==1.0.0)
+-e /home/learner/Desktop/Projects/Postparum_Dep/federated-learning/quickstart-pytorch
+protobuf==6.33.4
+pycparser==2.23
+pycryptodome==3.23.0
+Pygments==2.19.2
+pyparsing @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_pyparsing_1766475444/work
+PySide6==6.10.1
+python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_python-dateutil_1751104122/work
+pytz @ file:///home/conda/feedstock_root/build_artifacts/pytz_1742920838005/work
+PyYAML==6.0.3
+ray==2.51.1
+referencing==0.37.0
+requests==2.32.5
+rich==13.9.4
+rpds-py==0.30.0
+scikit-learn==1.5.0
+scipy==1.17.0
+shap @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_shap_1765446122/work
+shellingham==1.5.4
+shiboken6==6.10.1
+six @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_six_1753199211/work
+sklearn-compat @ file:///home/conda/feedstock_root/build_artifacts/sklearn-compat_1766329668603/work
+slicer @ file:///home/conda/feedstock_root/build_artifacts/slicer_1710029110974/work
+threadpoolctl @ file:///home/conda/feedstock_root/build_artifacts/threadpoolctl_1741878222898/work
+tomli==2.4.0
+tomli_w==1.2.0
+tornado @ file:///home/conda/feedstock_root/build_artifacts/tornado_1765836374256/work
+tqdm @ file:///home/conda/feedstock_root/build_artifacts/tqdm_1735661334605/work
+typer==0.20.1
+typing_extensions @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_typing_extensions_1756220668/work
+tzdata @ file:///home/conda/feedstock_root/build_artifacts/python-tzdata_1765719872007/work
+unicodedata2 @ file:///home/conda/feedstock_root/build_artifacts/unicodedata2_1763054814805/work
+urllib3==2.6.3
+xgboost==2.0.3
