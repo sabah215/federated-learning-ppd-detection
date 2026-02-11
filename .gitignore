@@ -22,3 +22,6 @@ ray_results/
 
 # Temporary outputs
 temp_global_*.json
+
+# Output Reports
+*.png
