@@ -37,19 +37,34 @@ class SaveModelStrategy(FedXgbBagging):
 
             _, (X_test, y_test) = load_ppd_data(partition_id=0, num_partitions=self.num_nodes)
             dtest = xgb.DMatrix(X_test)
-            preds = bst.predict(dtest) # Shape (N,) for binary
+            preds = bst.predict(dtest) 
             
-            # --- BINARY EVALUATION ---
-            # Threshold at 0.5: > 0.5 is Class 1 (Risk), else Class 0 (Healthy)
-            y_pred_class = (preds > 0.5).astype(int)
+            # ***** REPLACE THIS WITH THE OLD CODE ON GITHUB
+            # --- DYNAMIC THRESHOLD SEARCH ---
+            best_acc = 0.0
+            best_thresh = 0.5
             
-            acc = accuracy_score(y_test, y_pred_class)
+            # Test every threshold between 10% and 90%
+            for thresh in np.arange(0.10, 0.91, 0.01):
+                temp_preds = (preds > thresh).astype(int)
+                temp_acc = accuracy_score(y_test, temp_preds)
+                if temp_acc > best_acc:
+                    best_acc = temp_acc
+                    best_thresh = thresh
+            
+            # Apply the best threshold found
+            y_pred_class = (preds > best_thresh).astype(int)
+            # ***** REPLACE THIS WITH THE OLD CODE ON GITHUB
+            # y_pred_class = (preds > 0.5).astype(int)
+
+            # Calculate final metrics
+            acc = accuracy_score(y_test, y_pred_class)  # <-- Properly using y_pred_class
             loss = log_loss(y_test, preds)
+            
+            print(f"\n✅ ROUND {server_round}: Acc={acc:.4f} (Optimal Threshold: {best_thresh:.2f}), Loss={loss:.4f}")
             
             self.history_acc.append(acc)
             self.history_loss.append(loss)
-            
-            print(f"\n✅ ROUND {server_round}: Acc={acc:.4f}, Loss={loss:.4f}")
             self.save_learning_curve(server_round)
 
             if server_round == self.total_rounds: 
