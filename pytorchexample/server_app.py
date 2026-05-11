@@ -23,7 +23,8 @@ class SaveModelStrategy(FedXgbBagging):
         self.project_dir = os.path.abspath(os.getcwd())
 
     def aggregate_fit(self, server_round, results, failures):
-        aggregated_parameters, metrics = super().aggregate_fit(server_round, results, failures)
+        aggregated_parameters, metrics = super().aggregate_fit(
+            server_round, results, failures)
         if aggregated_parameters is None: return None, {}
 
         try:
