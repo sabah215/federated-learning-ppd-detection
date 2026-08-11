@@ -27,7 +27,7 @@ serverapp = "pytorchexample.server_app:app"
 clientapp = "pytorchexample.client_app:app"
 
 [tool.flwr.app.config]
-num-server-rounds = 15
+num-server-rounds = 20
 num-supernodes = 4          
 learning-rate = 0.05
 

@@ -16,7 +16,7 @@ USE_SHAP_FEATURE_SELECTION = False
 TOP_K_FEATURES = 10
 
 
-def get_federated_feature_selection(X, y, num_clients: int = 4, top_k: int = 50):
+def get_federated_feature_selection(X, y, num_clients: int = 4, top_k: int = 20):
     """Federated SHAP feature selection (optional; can be turned off)."""
     print("\n--- Starting Federated Feature Selection (SHAP Methodology) ---")
     n_samples = len(X)
@@ -141,7 +141,7 @@ def train_xgb(X_train, y_train, params):
         "objective": "binary:logistic", # <--- Correct objective
         "eval_metric": "logloss",       # <--- Correct metric
         "max_depth": 4,       
-        "eta": 0.05,
+        "eta": 0.02,
         "subsample": 0.8,
         "colsample_bytree": 0.8, 
         "min_child_weight": 3, 
